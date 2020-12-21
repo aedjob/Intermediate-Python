@@ -34,10 +34,36 @@ print(np.logical_or(my_house > 18.5, my_house < 10))
 print(np.logical_and(my_house < 11, your_house < 11))
 ```
 
-## if, elif, else
+## if, elif, else (conditional statements)
+```python
+z = 6
+if z % 2 == 0 :
+  print("checking" + str(z))
+  print("z is divisible by 2")
+elif z % 3 == 0 :
+  print("z is divisible by 3")
+else :
+  print("z is neither divisible by 2 nor by 3")
+```
 
+## Filtering pandas dataframes
+```python
+# 1. Get column
+brics["area"]
 
+# 2. Compare
+is_huge = brics["area"] > 8
 
+# 3. Subset DF
+brics[is_huge]    #returns values from the column 'area' that meet the previous condition
+
+# The three previous steps can be straight:
+brics[brics["area"] > 8]
+
+# For several conditions:
+brics[np.logical_and(brics["area"] > 8, brics["area"] < 10)]
+
+```
 
 
 
