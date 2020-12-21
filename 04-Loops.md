@@ -67,4 +67,21 @@ for val in np.nditer(meas) :
 - Numpy array
     - `for val in np.nditer(my_array) :`
 
+## Loop Data Structures Part 2 (pandas dataframe)
+```python
+# iterrows and selective print
+import pandas as pd
+brics = pd.read_csv("brics.csv", index_col = 0)
+for lab, row in brics.iterrows():
+    print(lab + ": " + row["capital"])
 
+# add column - not a good solution (head to the following)
+for lab, row in brics.iterrows():
+    # - creating series on every iteration 
+    brics.loc[lab, "name_lenght"] = len(row["country"])
+print(brics)
+
+# apply (function) - better alternative solution to add column
+brics["name_lenght"] = brics["country"].apply(len)
+print(brics)
+```
