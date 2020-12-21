@@ -32,4 +32,26 @@ print(europe['norway'])
 ```
 
 ## Dictionaries, Part 2
+- Keys have to be immutable objects (can't use a list inside a dictionary)
+To modify objects inside a dictionary
+```python
+world['sealand'] = 0.000027     #adds/updates object "sealand" to dictionary world with the assigned value
+world
+
+"sealand" in world      #adds object "sealand" to dictionary world
+
+del(world["sealand"])   #deletes object from dictionary
+world
+```
+| list | dictionary |
+| ---- | ---- |
+| indexed by range of numbers  | indexed by unique keys  |
+| collection of values, order matters, select entire subsets  | lookup table with unique keys |
+
+
+
+
+
+
+
 
