@@ -37,7 +37,7 @@ for x, y in house:
     print("the " + x + " is " + str(y) + " sqm")
 ```
 
-## Loop Data Structures Part 1
+## Loop Data Structures Part 1 (dictionaries, numpy arrays)
 ```python
 # Dictionary
 world = {"afghanistan":30.55,
