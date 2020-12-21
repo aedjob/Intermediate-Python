@@ -176,5 +176,15 @@ brics.loc[:, ["country","capital"]]      #access the defined columns and ALL row
 brics.iloc[[1]]         #access row 1 (based on position instead of label "RU")
 brics.iloc[:, [0,1]]    #access all rows and columns 0 and 1
 ```
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
 
+# Print out drives_right value of Morocco
+print(cars.loc[['MOR'],['drives_right']])
+
+# Print sub-DataFrame
+print(cars.iloc[[4,5],[1,2]])
+```
 
