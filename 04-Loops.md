@@ -85,3 +85,17 @@ print(brics)
 brics["name_lenght"] = brics["country"].apply(len)
 print(brics)
 ```
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Code for loop that adds COUNTRY column
+for lab, row in cars.iterrows():
+    cars.loc[lab, 'COUNTRY'] = row['country'].upper()
+
+# An easiest way to do it would be:
+# Use .apply(str.upper)
+cars["COUNTRY"] = cars["country"].apply(str.upper)
+print(cars)
+```
