@@ -36,3 +36,35 @@ house = [["hallway", 11.25],
 for x, y in house:
     print("the " + x + " is " + str(y) + " sqm")
 ```
+
+## Loop Data Structures Part 1
+```python
+# Dictionary
+world = {"afghanistan":30.55,
+         "albania":2.77,
+         "algeria":39.21 }
+for k, v in world.items() : 
+    print(k + "--" + str(v))
+    
+# Numpy arrays
+import numpy as np
+np_height = np.array([21, 32, 23, 23])
+np_weight = np.array([76, 46, 98, 66])
+bmi = np_weight / np_height ** 2
+for val in bmi:
+    print(val)
+
+# 2D numpy arrays
+import numpy as np
+np_height = np.array([21, 32, 23, 23])
+np_weight = np.array([76, 46, 98, 66])
+meas = np.array([np_weight, np_height])
+for val in np.nditer(meas) :
+    print(val)
+```
+- Dictionary
+    - for `key, val in my_dict.items() :`
+- Numpy array
+    - `for val in np.nditer(my_array) :`
+
+
