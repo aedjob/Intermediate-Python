@@ -65,6 +65,33 @@ for x in range(10):
     tails.append(tails[x] + coin)
 print(tails)                      #tails: [0, 0, 1, 1, 1, 2, 2, 3, etc...] (increasing 1 each time tails)
 ```
+```python
+# Numpy is imported, seed is set
+import numpy as np
+# Initialize random_walk
+np.random.seed(123)
+random_walk = [0]   #array
 
+for x in range(100) :
+    # Set step: last element in random_walk (array)
+    step = random_walk[-1]
+
+    # Roll the dice
+    dice = np.random.randint(1,7)
+
+    # Determine next step
+    if dice <= 2:
+        step = max(0, (step - 1))   #use max to make sure step can't go below 0
+    elif dice <= 5:
+        step = step + 1
+    else:
+        step = step + np.random.randint(1,7)
+
+    # append next_step to random_walk
+    random_walk.append(step)
+
+# Print random_walk
+print(random_walk)
+```
 
 
